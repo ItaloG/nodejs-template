@@ -19,6 +19,7 @@ export class ValidateTokenMiddleware implements Middleware {
     next: Middleware.Next
   ): Middleware.Result {
     try {
+      this.logger.log({ level: 'info', message: 'pr teest' });
       const authorization = httpRequest.headers.authorization as string;
 
       if (!authorization)
